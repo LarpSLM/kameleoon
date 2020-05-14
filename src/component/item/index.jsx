@@ -11,7 +11,6 @@ export default function Item(props) {
             <span>{props.type}</span>
             <p>Status:</p>
             <span className={props.status === 'blocked' ? style.badStatus : ''}>{props.status}</span>
-
             <div className={style.unlock}>
                 <button onClick={props.onClick}>Unlock</button>
             </div>
