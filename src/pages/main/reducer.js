@@ -1,6 +1,8 @@
 let initState = {
     items: [],
-    isLoading: false
+    search: '',
+    sort: {property: 'name', decrease: false },
+    isLoading: false,
 }
 
 export default function mainPageReducer (state = initState, action) {
@@ -16,10 +18,19 @@ export default function mainPageReducer (state = initState, action) {
                 isLoading: false,
                 items: action.payload
             }
-        case 'MAIN-PAGE_UNLOCK_ITEM':
+        case 'MAIN-PAGE_CHANGE_SORT':
             return {
                 ...state,
-                items: state.items.map(item => item.id === action.payload ? {...item, status: "enable"} : item )
+                sort: {...state.sort,
+                    property: action.payload,
+                    decrease: action.payload === state.sort.property && !state.sort.decrease
+                }
+            }
+        case 'MAIN-PAGE_CHANGE_FIELD_SEARCH':
+            return {
+                ...state,
+                sort: {...state.sort},
+                search: action.payload,
             }
         default:
             return state;

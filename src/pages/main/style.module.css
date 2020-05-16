@@ -1,24 +1,60 @@
 .mainPage {
-    background: #ededed;
-    min-height: 100vh;
-    height: auto;
+    width: 70%;
+    margin: 0 auto;
 }
 
-.mainPage .header {
-    font-family: 'Permanent Marker', sans-serif;
-    font-size: 3em;
-    text-align: center;
-    padding: .67em 0;
-    color: #2b2b2b;
-    text-shadow: 5px 5px 10px #d0d0d0, -5px -5px 10px #ffffff;
-    margin-bottom: 0.67em;
-    text-transform: uppercase;
-}
-
-.mainPage .items {
+.mainPage .search {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
-    grid-gap: 10vw;
-    justify-content: center;
-    padding-bottom: 3em;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    background: #ffffff;
+    margin: 1em 0;
 }
+
+.search i {
+    color: #8a8d8f;
+    padding: 10px;
+}
+
+.search input {
+    border: none;
+    height: 100%;
+}
+
+.itemsList {
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+
+.itemsList .header {
+    margin: 0 20px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: minmax(200px, 4fr) 1fr 1fr 1fr;
+    font-style: italic;
+    color: #00a485;
+    justify-items: center;
+    border-bottom: 1px solid #e6e6e6;
+
+}
+
+.header div:first-child {
+    justify-self: left;
+}
+
+.header span {
+    cursor: pointer;
+    user-select: none;
+}
+
+.searchFail {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+

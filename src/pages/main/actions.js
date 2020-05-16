@@ -13,4 +13,6 @@ export const getItems = () => {
     }
 }
 
-export const unlockItem = (id) => ({type: 'MAIN-PAGE_UNLOCK_ITEM', payload: id})
+export const changeSort = (id) => ({type: 'MAIN-PAGE_CHANGE_SORT', payload: `${id}`});
+
+export const changeFieldSearch = (value) => ({type: 'MAIN-PAGE_CHANGE_FIELD_SEARCH', payload: value});
