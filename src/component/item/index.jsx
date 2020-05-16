@@ -15,7 +15,9 @@ export default function Item(props) {
                     <span>{props.type}</span>
                 </div>
                 <div className={style.status}>
-                    <p>{props.status}</p>
+                    {props.status === 'enable' && <p className={style.toggleOn}>on</p>}
+                    {props.status === 'disable' && <p className={style.toggleOff}>off</p>}
+                    {props.status === 'blocked' && <i className="fas fa-lock"></i>}
                 </div>
             </div>
         </div>

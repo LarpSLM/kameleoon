@@ -18,10 +18,37 @@
     box-shadow: 0 0 10px 0 #8a8d8f;
 }
 
+.item div {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 .item div:first-child {
     justify-self: left;
 }
 
 .item span {
     color: #f8ca90;
+}
+
+.item .toggleOn,
+.item .toggleOff {
+    text-transform: uppercase;
+    color: white;
+    font-size: .9em;
+    border-radius: 9px;
+    height: 18px;
+    width: 50px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.item .toggleOn {
+    background: #00a485;
+}
+
+.item .toggleOff {
+    background: #8a8d8f;
 }
